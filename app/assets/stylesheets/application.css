@@ -13,3 +13,111 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background-color: #f0f0f0;
+}
+
+.result-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.result-score {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.play-again-btn {
+  margin-top: 20px;
+}
+
+.header-container {
+  max-width: 600px;
+  margin: 50px auto;
+  border-radius: 8px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.game-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.grid {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.grid li {
+  font-size: 24px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.grid li:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.input-container {
+  margin-top: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.input-container button {
+  margin-top: 10px;
+}
+
+.grid li.disabled {
+  background-color: #ccc;
+}
+
+@keyframes celebration {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1.05); }
+  75% { transform: scale(1.15); }
+  100% { transform: scale(1.05); }
+}
+
+/* Apply the animation to the .celebration class */
+.celebration {
+  animation: celebration 2s infinite;
+  background-color: #32CD32; /* Light green */
+  border: 2px solid #228B22; /* Dark green */
+  color: #fff;
+  border-radius: 8px;
+}
+
+.failure {
+  background-color: #FF6347; /* Tomato red */
+  border: 2px solid #B22222; /* Dark red */
+  color: #fff;
+  border-radius: 8px;
+}
