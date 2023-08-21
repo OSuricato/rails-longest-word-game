@@ -11,6 +11,8 @@ class GamesController < ApplicationController
 
     @letters = (consonants.sample(consonant_count) + vowels.sample(vowel_count)).shuffle
     session[:letters] = @letters
+    
+    @score = session[:score] || 0
   end
 
   def score
@@ -29,5 +31,9 @@ class GamesController < ApplicationController
     else
       @player_score = "Sorry, but #{word['word'].downcase} is not a valid English Word..."
     end
+
+    @score = session[:score] || 0
+    @score += @input.chars.count if word['found'] == true && valid_word
+    session[:score] = @score
   end
 end

@@ -2,6 +2,7 @@
   <div class="result-container <%= @player_score.include?('Sorry') ? 'failure' : (@player_score.include?('Congratulations') ? 'celebration' : '') %>">
     <h3>Result:</h3>
     <p class="result-score"><%= @player_score %></p>
+    <p>Your current score: <%= @score %></p>
     <%= link_to "Play again", "/", class: "btn btn-primary play-again-btn" %>
   </div>
 </div>
